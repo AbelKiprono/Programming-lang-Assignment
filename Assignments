@@ -1,0 +1,215 @@
+
+                     SUDO COMMANDS
+
+
+Argument	Description	Example
+-u	Run the command as a specific user.	sudo -u user command
+-g	Run the command as a specific group.	sudo -g group command
+-b	Run the command in the background.	sudo -b command
+-p	Use a custom prompt.	sudo -p 'password: ' command
+-k	Invalidate the user’s cached credentials.	sudo -k command
+-l	List the commands the user can execute.	sudo -l
+-v	Validate the user’s cached credentials.	sudo -v
+-h	Display help message.	sudo -h
+-V	Display version information.	sudo -V
+-i	Launch a new shell as the specified user.	sudo -i -u user
+-s	Launch a new shell with the user’s environment.	sudo -s
+-H	Set the HOME environment variable to the home directory of the target user.	sudo -H command
+                       
+
+
+
+
+                             APT COMMANDS
+
+
+sudo apt update    #updating the system
+sudo apt upgrade   #upgrading system
+
+sudo apt full-upgrade -y  #Full upgrade
+
+
+    HARDWARE CHECKING COMMANDS
+
+lscpu: See CPU information.
+lsblk: View block device information.
+lspci -tv: Display PCI devices in a tree-like diagram.
+lsusb -tv: Show USB devices in a tree-like diagram.
+lshw: List hardware configuration.
+cat /proc/cpuinfo: Detailed CPU information.
+cat /proc/meminfo: System memory details.
+cat /proc/mounts: Mounted file systems.
+free -h: Display free and used memory.
+sudo dmidecode: BIOS hardware information.
+hdparm -i /dev/[device_name]: Disk data information.
+hdparm -tT /dev/[device_name]: Conduct a read speed test.
+badblocks -s /dev/[device_name]: Test for unreadable blocks.
+fsck /dev/[device_name]: Run disk check on an unmounted disk or partition.
+     SEARCHINNG COMMANDS:
+find [path] -name [search_pattern]: Find files and directories.
+find [path] -size [+100M]: Search for larger files.
+grep [search_pattern] [file_name]: Search within files.
+grep -r [search_pattern] [directory_name]: Recursively search.
+locate [name]: Locate files and directories.
+which [command]: Search for command paths.
+
+
+
+USER AND GROUPS
+
+
+
+id
+last
+who
+w
+finger [user_name]
+sudo useradd 
+[user_name]
+sudo adduser 
+[user_name]
+sudo userdel [user_name]
+sudo usermod -aG 
+[group_name] 
+[user_name]
+passwd
+sudo passwd [user_name]
+sudo groupadd 
+[group_name]
+sudo groupdel 
+[group_name]
+sudo groupmod -n 
+[new_name] [old_name]
+sudo [command]
+su - [user_name]
+chgrp [group_name] [file/
+directory]
+See details about the 
+active users.
+Show the last system 
+logins.
+Display who is currently 
+logged into the system.
+Show which users 
+are logged in and their 
+activity.
+Show user information.
+Create a new user account.
+Create a new user account 
+through the adduser 
+command interface.
+Delete a user account.
+Modify user 
+information (add a user to 
+a group).
+Change the current user's 
+or another user's 
+password.
+Add a new group.
+Delete a group.
+Modify a user group 
+(change group name).
+Temporarily elevate user 
+privileges to superuser or 
+root.
+Switch the user account or 
+become a superuser.
+Change file or directory 
+groups
+
+
+
+FILES
+
+mkdir [directory_name]
+rm [file_name]
+rm -r [directory_name]
+rm -rf [directory_name]
+cp [source_file] 
+[destination_file]
+cp -r [source_directory] 
+[destination_directory]
+mv [source_file] 
+[destination_file]
+ln -s [path]/[file_name] 
+[link_name]
+touch [file_name]
+cat [file_name]
+cat [source_file] >> 
+[destination_file]
+head [file_name]
+tail [file_name]
+more [file_name]
+less [file_name]
+nano [file_name]
+vi [file_name]
+vim [file_name]
+gpg -c [file_name]
+gpg [file_name].gpg
+wc -w [file_name]
+ls | xargs wc
+cut -d [delimiter] 
+[file_name]
+[data] | cut -d [delimiter]
+shred -u [file_name]
+diff [first_file] 
+[second_file]
+source [file_name][command] | tee 
+[file_name] >/dev/null
+Create a new directory.
+Remove a file.
+Remove a directory 
+recursively.
+Recursively remove a 
+directory without requiring 
+confirmation.
+Copy the contents of one 
+file to another file.
+Recursively copy a 
+directory to a second 
+directory.
+Move or rename files or 
+directories.
+Create a symbolic link to a 
+file.
+Create a new file.
+Show the contents of a file.
+Append file contents to 
+another file.
+Show the first ten lines of a 
+file.
+Show the last ten lines of a 
+file.
+Display contents of a file 
+page by page.
+Show the contents of a file 
+with navigation.
+Open or create a file using 
+the nano text editor.
+Open or create a file using 
+the Vi/Vim text editor.
+Encrypt a file.
+Decrypt an 
+encrypted .gpg file.
+Show the number of 
+words, lines, and bytes in a 
+file.
+List the number of lines/
+words/characters in each 
+file in a directory.
+Cut a section of a file and 
+print the result to standard 
+output.
+Cut a section of piped data 
+and print the result to 
+standard output.
+Overwrite a file to prevent 
+its recovery, then delete it.
+Compare two files and 
+display differences.
+Read and execute the file 
+content in the current shell.
+Store the command 
+
+
+
